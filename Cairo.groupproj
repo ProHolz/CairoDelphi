@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1D1DF362-14A0-4BC0-8A71-5BBCDF0F50FD}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Tests\testCairo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Dll\CairoExport.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="testCairo">
+        <MSBuild Projects="Tests\testCairo.dproj"/>
+    </Target>
+    <Target Name="testCairo:Clean">
+        <MSBuild Projects="Tests\testCairo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="testCairo:Make">
+        <MSBuild Projects="Tests\testCairo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CairoExport">
+        <MSBuild Projects="Dll\CairoExport.dproj"/>
+    </Target>
+    <Target Name="CairoExport:Clean">
+        <MSBuild Projects="Dll\CairoExport.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CairoExport:Make">
+        <MSBuild Projects="Dll\CairoExport.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="testCairo;CairoExport"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="testCairo:Clean;CairoExport:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="testCairo:Make;CairoExport:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
