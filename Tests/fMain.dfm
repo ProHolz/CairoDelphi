@@ -30,7 +30,7 @@ object Form16: TForm16
       Top = 13
       Width = 239
       Height = 25
-      Caption = 'Write Pdf with CaroExport.dll'
+      Caption = 'Write Pdf with CairoExport.dll'
       TabOrder = 0
       OnClick = Button2Click
     end

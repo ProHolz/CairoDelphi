@@ -1132,6 +1132,7 @@ begin
     mf := Tmetafile.Create;
     try
       mf.Assign(clipboard);
+      Image1.Picture.Metafile.Assign(mf);
       // Clipboard.
 
       ltemp := TEmfToCairoClass.Create;

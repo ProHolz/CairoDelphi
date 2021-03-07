@@ -19,6 +19,7 @@ type
     procedure init_scale(sx, sy: Double);
     procedure init_rotate(radians: Double);
     procedure initWithMatrix(const Value : cairo_matrix_t);
+    procedure AssignFrom(const Value : TCairoMatrix);
     procedure translate(tx, ty: Double);
     procedure scale(sx, sy: Double);
     procedure rotate(radians: Double);
@@ -199,6 +200,10 @@ begin
  cairo_matrix_multiply(@fMatrix, @a, @b);
 end;
 
+procedure TCairoMatrix.AssignFrom(const Value: TCairoMatrix);
+begin
+  fmatrix := Value.fMatrix;
+end;
 { TRegion }
 
 function TRegion.create: Pcairo_region_t;
