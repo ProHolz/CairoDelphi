@@ -7,7 +7,7 @@ The cairo.dll found in the WINxx folder is compiled with VS2017 and includes fre
 
 The CairoExport.dll can be compiled with the sources here
 
-You can use the CairoExport.dll to create Pdf files from Windows-Matafiles
+You can use the CairoExport.dll to create Pdf files from Windows-Metafiles
 as a Example: https://github.com/landrix/TPrintPreview-for-Delphi
 
 have fun
