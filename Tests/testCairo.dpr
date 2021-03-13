@@ -17,7 +17,6 @@ uses
   Cairo.NotImplemented in '..\src\Cairo.NotImplemented.pas',
   Cairo.Canvas in '..\src\Cairo.Canvas.pas',
   Cairo.Freetype in '..\src\Cairo.Freetype.pas',
-  Cairo.FtFontManager in '..\src\Cairo.FtFontManager.pas',
   Cairo.Interfaces in '..\src\Cairo.Interfaces.pas',
   Cairo.Factory in '..\src\Cairo.Factory.pas',
   Cairo.Emf in '..\src\Cairo.Emf.pas',

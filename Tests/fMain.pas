@@ -19,7 +19,6 @@ uses
   Cairo.Types,
   Cairo.Base,
   Cairo.Interfaces,
-  Cairo.FtFontManager,
   Vcl.ComCtrls;
 
 type
@@ -1274,7 +1273,6 @@ procedure TForm16.PaintBoxFreetypePaint(Sender: TObject);
 var
   lCanvas: ICairoContext;
   lSurface: ICairoSurface;
-  lftm: TFtFontmanager;
   lCount: Integer;
 begin
   lSurface := CairoFactory.createGDI_with_format(PaintBoxFreetype.Canvas.Handle, CAIRO_FORMAT_ARGB32);
